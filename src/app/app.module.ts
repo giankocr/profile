@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
-import { SkilsComponent } from './skils/skils.component';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
@@ -14,7 +13,6 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
   declarations: [
     AppComponent,
     AboutComponent,
-    SkilsComponent,
     SkillsComponent,
     EducationComponent,
     PortfolioComponent
