@@ -4,12 +4,7 @@ html {
 
 body {
     overflow: hidden;
-    background: #bcdee7;
-    /*url("../img/bg.jpg") no-repeat center center fixed;*/
-    background-size: cover;
-    position: fixed;
-    padding: 0px;
-    margin: 0px;
+    background: #313440;
     width: 100%;
     height: 100%;
     font: normal 14px/1.618em "Roboto", sans-serif;
@@ -17,21 +12,7 @@ body {
 }
 
 body:before {
-    content: "";
-    height: 0px;
-    padding: 0px;
     border: 130em solid #313440;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    z-index: 2;
-    display: block;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    -webkit-animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
-    animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
 }
 
 h1,
@@ -41,7 +22,7 @@ h2 {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 28px;
 }
 
 h2 {
@@ -52,17 +33,55 @@ p {
     margin: 0px;
 }
 
+.titles {
+    position: static;
+    text-align: center;
+    color: whitesmoke;
+}
+
+.card-img-top {
+    width: 120%;
+}
+
+.card-columns .card {
+    padding-left: 0px !IMPORTANT;
+}
+
+@media (min-width: 576px) {
+    .card-columns .card {
+        display: inline-block;
+        width: 80%;
+        margin-left: 1px;
+    }
+}
+
+.card-block {
+    padding-top: 1px;
+    margin-top: -2px;
+}
+
+.card-title {
+    font-size: 20px;
+    margin-left: 5px;
+    padding-right: 5px;
+}
+
+.card-columns .card {
+    padding-left: 1px;
+    display: block;
+    overflow: hidden;
+}
+
+.x5 {
+    font-size: 50px;
+}
+
 .profile-card {
-    background: #FFB300;
-    width: 56px;
-    height: 56px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
+    position: fixed;
     z-index: 2;
+    margin-left: 15px;
     overflow: hidden;
     opacity: 0;
-    margin-top: 70px;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     -webkit-border-radius: 50%;
@@ -75,7 +94,7 @@ p {
 
 .profile-card header {
     width: 179px;
-    height: 280px;
+    height: 480px;
     padding: 40px 20px 30px 20px;
     display: inline-block;
     float: left;
@@ -90,7 +109,27 @@ p {
 }
 
 .profile-card header h1 {
-    color: #FF5722;
+    color: #1f853e;
+}
+
+.fa-facebook {
+    color: #3b5998 !important;
+    font-size: 28px;
+}
+
+.fa-twitter {
+    color: #47bde4 !important;
+    font-size: 28px;
+}
+
+.fa-github {
+    color: #2f2f2f !important;
+    font-size: 28px;
+}
+
+.fa-linkedin {
+    color: #0077b5 !important;
+    font-size: 28px;
 }
 
 .profile-card header a {
@@ -122,8 +161,8 @@ p {
     /* IE6-9 */
     -webkit-border-radius: 50%;
     border-radius: 50%;
-    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.6);
     -webkit-animation: scaleIn 0.3s 3.5s ease forwards;
     animation: scaleIn 0.3s 3.5s ease forwards;
 }
@@ -132,11 +171,11 @@ p {
     width: 120px;
     max-width: 100%;
     -webkit-border-radius: 80%;
-    border-radius: 8%;
+    border-radius: 80%;
     -webkit-transition: -webkit-box-shadow 0.3s ease;
     transition: box-shadow 0.3s ease;
-    -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
-    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);
+    -webkit-box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .profile-card header a:hover>img {
@@ -152,7 +191,7 @@ p {
     padding: 50px 20px 30px 20px;
     background: #FFFFFF;
     color: #333333;
-    margin-top: 50px;
+    margin-top: 10px;
     text-align: center;
     opacity: 0;
     -webkit-animation: moveIn 1s 3.1s ease forwards;
@@ -162,7 +201,7 @@ p {
 .profile-LinkedIn {
     left: 50%;
     top: 50%;
-    z-index: 2;
+    z-index: 1;
     overflow: hidden;
     opacity: 0;
     margin-top: 90px;
@@ -186,7 +225,6 @@ p {
     float: right;
     margin: 0px;
     padding: 15px 20px;
-    background: #FFFFFF;
     margin-top: 50px;
     text-align: center;
     opacity: 0;
@@ -207,9 +245,8 @@ p {
 
 .profile-social-links li a {
     display: inline-block;
-    color: red;
-    width: 24px;
-    height: 24px;
+    width: 54px;
+    height: 54px;
     padding: 6px;
     position: relative;
     overflow: hidden!important;
@@ -233,7 +270,7 @@ p {
         height: 0px;
     }
     100% {
-        width: 56px;
+        width: 89px;
         height: 56px;
         margin-top: 0px;
         opacity: 1;
@@ -246,7 +283,7 @@ p {
         height: 0px;
     }
     100% {
-        width: 56px;
+        width: 89px;
         height: 56px;
         margin-top: 0px;
         opacity: 1;
@@ -255,14 +292,14 @@ p {
 
 @-webkit-keyframes puff {
     0% {
-        top: 100%;
+        top: 0%;
         height: 0px;
         padding: 0px;
     }
     100% {
-        top: 50%;
+        top: 5%;
         height: 100%;
-        padding: 0px 100%;
+        padding: 0px 10%;
     }
 }
 
@@ -373,7 +410,7 @@ p {
     }
     100% {
         width: 440px;
-        height: 280px;
+        height: 480px;
         background: #FFFFFF;
         border-radius: 4px;
     }
@@ -386,7 +423,7 @@ p {
     }
     100% {
         opacity: 1;
-        margin-top: -20px;
+        margin-top: -2px;
     }
 }
 
@@ -397,7 +434,7 @@ p {
     }
     100% {
         opacity: 1;
-        margin-top: -20px;
+        margin-top: -2px;
     }
 }
 
@@ -508,7 +545,7 @@ p {
         }
         100% {
             width: 280px;
-            height: 440px;
+            height: 340px;
             background: #FFFFFF;
             -webkit-border-radius: 4px;
         }
@@ -522,9 +559,10 @@ p {
         }
         100% {
             width: 280px;
-            height: 440px;
+            height: 660px;
             background: #FFFFFF;
             border-radius: 4px;
+            margin-left: -50px;
         }
     }
 }
